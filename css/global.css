@@ -1,1 +1,268 @@
-/* ניתן להשתמש לנוחותכם - לא חובה*/
+
+
+
+.hamburger {
+  display: none;
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--page-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding: 30px;
+  margin-top: 100px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card,
+.booking-card,
+.property,
+form {
+  background: var(--button-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px black;
+  margin: 15px auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input,
+button {
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid whitesmoke;
+  border-radius: 6px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+form a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: var(--hamburger-color);
+  text-decoration: none;
+}
+
+form a:hover {
+  color: var(--button-hover-color);
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--navbar-background);
+  box-shadow: 0 2px 5px black;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--button-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--hamburger-color);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--button-hover-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#listings {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.listing-card {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.listing-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 993px) {
+  #listings {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) and (min-width: 577px) {
+  #listings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  #listings {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    margin: 0 auto;
+    color: var(--hamburger-color);
+    background-color: var(--button-color);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: whitesmoke;
+    padding: 10px 0;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .card,
+  .booking-card,
+  .property,
+  form {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 100%;
+  }
+}
