@@ -1,0 +1,16 @@
+#bookingsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+#bookingsGrid .card {
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
