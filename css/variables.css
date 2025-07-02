@@ -1,3 +1,11 @@
 :root {
-
+  --button-color: salmon;
+  --button-hover-color: orange;
+  --text-color: black;
+  --button-text-color: white;
+  --hamburger-color: darkslategray;
+  --navbar-background: whitesmoke;
+  --page-background: #e3e0d2;
+  
 }
+
