@@ -1,0 +1,62 @@
+
+
+ .filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 20px auto;
+  background-color: var(--button-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px black;
+  max-width: 95vw;       
+  box-sizing: border-box; 
+  overflow-x: auto;       
+}
+
+.filter-bar label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  color: white;
+}
+
+
+
+.filter-bar input,
+.filter-bar select {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  min-width: 70px;
+  max-width: 120px;
+}
+
+
+
+.filter-bar button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: var(--button-hover-color);
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-bar label {
+    width: 100%;
+  }
+} 
