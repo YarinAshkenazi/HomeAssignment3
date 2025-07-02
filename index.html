@@ -14,5 +14,32 @@
     <script src="js/utils.js" defer></script>
     <script src="js/listing.js" defer></script>
   </head>
-  <body></body>
+  <body><main >
+      <h1>Rent a place</h1>
+      <form id="filterForm" class="filter-bar">
+        <label>Rating:
+         <input type="number" id="minRating" min="0" max="5" step="0.1">
+       </label>
+       <label>Min $:
+        <input type="number" id="minPrice" min="0">
+       </label>
+       <label>Max $:
+        <input type="number" id="maxPrice" min="0">
+       </label>
+       <label>Beds:
+        <select id="bedrooms">
+        <option value="">Any</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3+</option>
+        </select>
+       </label>
+
+       <button type="submit">Filter</button>
+      </form>
+
+    <p id="listingCount" style="text-align:center; font-weight:bold;"></p>
+      
+      <div id="listings" class="grid"></div>
+    </main></body>
 </html>
